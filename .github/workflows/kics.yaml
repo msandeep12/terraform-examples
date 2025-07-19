@@ -15,7 +15,7 @@ jobs:
     - name: run kics Scan
       uses: msandeep12/kics-github-action@master
       with:
-        path: 'aws/aws_vpc_msk'
+        path: 'aws/aws_mailgun_domain'
         type: terraform
         platform_type: terraform
         #ignore_on_exit: results
