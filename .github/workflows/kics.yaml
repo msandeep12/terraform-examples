@@ -18,8 +18,9 @@ jobs:
         path: 'aws/aws_domain_redirect'
         type: terraform
         platform_type: terraform
-        ignore_on_exit: results
-        #fail_on_threshold: 'high>2,low<5'
+        #ignore_on_exit: results
+        exclude_queries: fc5109bf-01fd-49fb-8bde-4492b543c34a
+        fail_on_threshold: 'high>200,low<500'
         output_path:  results-dir/
     - name: display kics results
       run: |
