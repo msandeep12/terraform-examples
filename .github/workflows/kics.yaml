@@ -15,7 +15,7 @@ jobs:
     - name: run kics Scan
       uses: msandeep12/kics-github-action@master
       with:
-        path: 'aws,azure'
+        path: 'aws/aws_domain_redirect'
         type: terraform
         platform_type: terraform
         #fail_on_threshold: 'high>2,low<5'
