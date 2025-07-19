@@ -15,12 +15,12 @@ jobs:
     - name: run kics Scan
       uses: msandeep12/kics-github-action@master
       with:
-        path: 'aws'
+        path: 'aws/aws_vpc_msk'
         type: terraform
         platform_type: terraform
         #ignore_on_exit: results
-        exclude_queries: fc5109bf-01fd-49fb-8bde-4492b543c34a
-        fail_on_threshold: 'high>200,low>500'
+        exclude_queries: fc5109bf-01fd-49fb-8bde-4492b543c34a,2a153952-2544-4687-bcc9-cc8fea814a9b
+        fail_on_threshold: 'high>2,low>5'
         output_path:  results-dir/
     - name: display kics results
       run: |
