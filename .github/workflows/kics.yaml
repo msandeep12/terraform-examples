@@ -1,0 +1,25 @@
+name: Test KICS action PR comment
+
+on:
+  workflow_dispatch:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Mkdir results-dir
+        # make sure results dir is created
+      run: mkdir -p results-dir
+    - name: run kics Scan
+      uses: msandeep12/kics-github-action@master
+      with:
+        path: 'aws,azure'
+        type: terraform
+        platform_type: terraform
+        fail_on_threshold: 'high>2,low<5'
+        output_path:  results-dir/
+    - name: display kics results
+      run: |
+        cat  results-dir/results.json
