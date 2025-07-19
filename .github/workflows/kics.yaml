@@ -22,6 +22,7 @@ jobs:
         exclude_queries: fc5109bf-01fd-49fb-8bde-4492b543c34a,2a153952-2544-4687-bcc9-cc8fea814a9b
         fail_on_threshold: 'high>20,low>50'
         output_path:  results-dir/
+        exclude_severities: 'info'
     - name: display kics results
       run: |
         cat  results-dir/results.json
