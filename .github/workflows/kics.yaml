@@ -15,7 +15,7 @@ jobs:
     - name: run kics Scan
       uses: msandeep12/kics-github-action@master
       with:
-        path: 'aws/aws_domain_redirect'
+        path: 'aws'
         type: terraform
         platform_type: terraform
         #ignore_on_exit: results
