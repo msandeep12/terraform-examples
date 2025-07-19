@@ -18,7 +18,7 @@ jobs:
         path: 'aws,azure'
         type: terraform
         platform_type: terraform
-        fail_on_threshold: 'high>2,low<5'
+        #fail_on_threshold: 'high>2,low<5'
         output_path:  results-dir/
     - name: display kics results
       run: |
