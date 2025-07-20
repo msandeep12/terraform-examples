@@ -18,10 +18,10 @@ jobs:
         path: 'aws/aws_mailgun_domain'
         type: terraform
         platform_type: terraform
-        #ignore_on_exit: results
+        ignore_on_exit: results
         #fail_on: ''
         exclude_queries: fc5109bf-01fd-49fb-8bde-4492b543c34a,2a153952-2544-4687-bcc9-cc8fea814a9b #,e592a0c5-5bdb-414c-9066-5dba7cdea370
-        fail_on_threshold: 'low>10,high>50,medium>20'
+        fail_on_threshold: 'low>0,high>50,medium>20'
         output_path:  results-dir/
         exclude_severities: 'info'
     - name: display kics results
